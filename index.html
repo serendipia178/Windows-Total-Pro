@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<meta name="application-name" content="win-xp">
-<meta name="description" content="Escritorio Windows XP con suite Carbono v17 integrada en una ventana local.">
-<title>win-xp + Carbono v17 — Soluciones Carbono S.A.</title>
+<meta name="application-name" content="Windows Total Pro">
+<meta name="description" content="Windows Total Pro: lanzador local de aplicaciones ÓRBITA con Carbono v17 integrado.">
+<title>Windows Total Pro — Fernando Juan · Soluciones Carbono Pro</title>
 <style>
 :root{--blue:#245edb;--blue2:#3c8cf4;--title:#0058e6;--text:#111;--panel:#ece9d8;--line:#7f9db9;--task-h:38px}
 *{box-sizing:border-box}html,body{height:100%;margin:0;overflow:hidden;font-family:Tahoma,Verdana,sans-serif;font-size:12px;color:var(--text);user-select:none}
@@ -63,15 +63,48 @@ body.vista .taskapp{border-radius:5px;background:linear-gradient(#7db6db88,#183f
 #desktopTools button{border:1px solid #fff9;border-radius:5px;padding:7px 9px;color:white;background:#123d66b8;box-shadow:0 2px 6px #0004;font-size:11px;backdrop-filter:blur(6px)}
 #desktopTools button:active{transform:translateY(1px)}
 @media(max-width:520px){#desktopTools{top:4px;right:4px;max-width:70%}#desktopTools button{padding:6px;font-size:10px}}
+
+/* Windows Total Pro v4 */
+#carbonoSplash{background:radial-gradient(ellipse at 50% 18%,#244b70 0,#101b2c 42%,#03060b 100%)}
+#carbonoSplash:before{background:radial-gradient(ellipse at 50% 20%,#4d8fbd33,transparent 55%),linear-gradient(120deg,transparent 0 49.7%,#ffffff09 50%,transparent 50.3%)}
+.splashCard{background:linear-gradient(145deg,#172638ed,#060a11f2);border-color:#7eb8df55;box-shadow:0 25px 80px #000c,inset 0 1px #ffffff22}
+.splashMark{width:86px;height:74px;transform:none;gap:5px}.splashMark i{border-radius:4px;box-shadow:inset 0 1px #ffffff66,0 3px 8px #0008}
+.splashName{font-size:clamp(28px,7vw,44px);letter-spacing:-1px}.splashName span{color:#8fcfff}.splashSub{letter-spacing:2px;color:#c6e5ff;font-weight:bold}.splashStart{color:#f5fbff;background:linear-gradient(#376b91,#17344e);border-color:#8dc8ee;box-shadow:inset 0 1px #ffffff44,0 3px 12px #0008}
+.splashBrand{font-size:clamp(15px,3.5vw,21px);font-weight:800;letter-spacing:2px;color:#e9f6ff;margin-top:12px;text-shadow:0 2px 10px #000}
+#appManager{position:fixed;inset:0;z-index:150000;background:#030914bb;display:none;align-items:center;justify-content:center;padding:12px;color:#eef7ff;backdrop-filter:blur(5px)}
+#appManager.open{display:flex}.managerCard{width:min(640px,100%);max-height:90dvh;overflow:auto;border:1px solid #6ca6d2;border-radius:12px;background:linear-gradient(145deg,#172b40,#07101b);box-shadow:0 24px 80px #000b;padding:16px}.managerHead{display:flex;align-items:center;gap:10px;margin-bottom:10px}.managerHead h2{font-size:20px;margin:0;flex:1}.managerIntro{color:#c1d6e8;line-height:1.5}.managerActions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.managerBtn{border:1px solid #6899bd;border-radius:7px;padding:9px 12px;color:#f5fbff;background:linear-gradient(#315d7d,#17344c);box-shadow:inset 0 1px #ffffff22}.managerBtn:active{transform:translateY(1px)}#importPicker{display:none}.managerList{display:grid;gap:7px}.managedApp{display:flex;align-items:center;gap:9px;padding:9px;border:1px solid #ffffff22;border-radius:8px;background:#ffffff09}.managedApp .mi{font-size:25px}.managedApp .mt{flex:1;min-width:0}.managedApp small{display:block;color:#a9c2d8;overflow-wrap:anywhere}.managedApp button{border:1px solid #9ebbd1;border-radius:5px;background:#213d54;color:white;padding:6px 8px}.managerNote{font-size:11px;color:#a9c2d8;line-height:1.5;margin-top:12px}
+body.vista #desktop{background:#07121e;background-image:radial-gradient(ellipse at 50% 5%,#507fa0 0,#1c4663 36%,#0b2033 72%,#03080f 100%)}
+@media(max-width:520px){.managerCard{padding:12px}.managerHead h2{font-size:17px}.managedApp{flex-wrap:wrap}.managedApp .mt{min-width:55%}}
+
+/* v5: correcciones exclusivas del lanzador */
+#windows{position:absolute;inset:0;pointer-events:none}#windows>.win{pointer-events:auto}
+#desktopTools{z-index:10}#taskApps{min-width:0;overflow-x:auto;overflow-y:hidden}.taskapp{flex-shrink:0}
+.titlebar{touch-action:none}.smBody{overflow-y:auto}.smCol{min-width:0}
+#desktopIcons{right:0;bottom:0;max-height:none;overflow:auto;padding-bottom:8px;pointer-events:none}#desktopIcons>.dicon{pointer-events:auto;flex-shrink:0}
+.splashLoading i{animation:none!important;width:100%}#carbonoSplash{max-height:100%;overflow:auto}.splashCard{margin:auto}
+button:focus-visible,[role=button]:focus-visible{outline:2px solid #ffcf42;outline-offset:2px}
+@media(max-height:450px){.splashCard{padding:12px}.splashMark{width:42px;height:36px;margin-bottom:8px}.splashLoading{margin:12px auto 8px}.splashCopyright{margin-top:8px}.splashStart{margin-top:8px}}
 </style>
 </head>
 <body>
+<div id="carbonoSplash" role="dialog" aria-label="Inicio de Windows Total Pro" aria-modal="true">
+  <div class="splashCard">
+    <div class="splashMark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="splashName">Windows <span>Total Pro</span></div>
+    <div class="splashSub">Lanzador de aplicaciones</div>
+    <div class="splashBrand">SOLUCIONES CARBONO PRO</div>
+    <div class="splashLoading" aria-hidden="true"><i></i></div>
+    <div class="splashStatus" id="splashStatus">Preparando el escritorio…</div>
+    <button class="splashStart" id="splashStart" type="button">Iniciar Windows Total Pro ♪</button>
+    <div class="splashCopyright">© Fernando Juan · SOLUCIONES CARBONO PRO<br>Todos los derechos reservados.</div>
+  </div>
+</div>
 
-
-<div id="desktop" aria-label="Escritorio win-xp">
+<div id="desktop" aria-label="Escritorio Windows Total Pro">
   <div id="wallpaper"></div>
-  <div id="desktopTools" aria-label="Personalización del escritorio"><button id="vistaToggle" type="button">🪟 Cambiar a Vista</button><button id="downloadApp" type="button">⬇ Guardar HTML</button><button id="wallpaperHelp" type="button">🖼 Fondo</button></div>
+  <div id="desktopTools" aria-label="Personalización del escritorio"><button id="vistaToggle" type="button">🪟 Cambiar a Vista</button><button id="downloadApp" type="button">⬇ Guardar HTML</button><button id="wallpaperHelp" type="button">🖼 Fondo</button><button id="manageApps" type="button">🧩 Mis aplicaciones</button></div>
   <input id="wallpaperPicker" type="file" accept="image/*" hidden="" aria-label="Seleccionar fondo de pantalla">
+  <input id="importPicker" type="file" accept=".html,.htm,text/html" multiple="" aria-label="Importar aplicaciones HTML">
   <div id="desktopIcons">
     <div class="dicon" data-app="computer" tabindex="0" role="button" aria-label="Mi PC"><span class="ico">🖥️</span><span>Mi PC</span></div>
     <div class="dicon" data-app="internet" tabindex="0" role="button" aria-label="Internet Explorer"><span class="ico">🌐</span><span>Internet Explorer</span></div>
@@ -104,10 +137,12 @@ body.vista .taskapp{border-radius:5px;background:linear-gradient(#7db6db88,#183f
   </div>
   <div class="smFoot"><button id="logoff">🔑 Cerrar sesión</button><button id="shutdown">⏻ Apagar</button></div>
 </div>
-<div id="taskbar"><button id="startBtn" aria-expanded="false"><span id="startLogo">🪟</span> inicio</button><div id="taskApps"></div><div id="tray"><span>🔊</span><span id="clock">05:49</span></div></div>
+<div id="appManager" role="dialog" aria-modal="true" aria-label="Administrador de aplicaciones"><div class="managerCard"><div class="managerHead"><span style="font-size:30px">🧩</span><h2>Windows Total Pro · Aplicaciones</h2><button class="managerBtn" id="closeManager" aria-label="Cerrar">✕</button></div><p class="managerIntro">Añade tus aplicaciones HTML desde el dispositivo. Windows Total Pro conservará una copia local del archivo en este navegador y creará un acceso directo en el escritorio.</p><div class="managerActions"><button class="managerBtn" id="importApps">＋ Importar archivos HTML</button><button class="managerBtn" id="newFolder">📁 Crear categoría</button></div><div id="categoryList"></div><div class="managerList" id="managedApps"><p>Cargando aplicaciones…</p></div><p class="managerNote">Los archivos se guardan en el almacenamiento local del navegador de este dispositivo. No se suben a Internet. Si borras los datos del navegador, podrías perder las aplicaciones importadas; conserva siempre los HTML originales. Carbono v17 permanece integrado sin modificaciones.</p></div></div>
+<div id="taskbar"><button id="startBtn" aria-expanded="false"><span id="startLogo">🪟</span> inicio</button><div id="taskApps"></div><div id="tray"><span>🔊</span><span id="clock">--:--</span></div></div>
 <script>
 (()=> {
 'use strict';
+const SOURCE_HTML='<!doctype html>\n'+document.documentElement.outerHTML;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const windows=$('#windows'), taskApps=$('#taskApps'), startMenu=$('#startMenu'), startBtn=$('#startBtn');
 let z=20, nextId=1, wins=new Map(), activeId=null, audioOn=true, audioCtx=null;
@@ -141,6 +176,28 @@ const appInfo={
 };
 function beep(kind='click'){if(!audioOn)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=kind==='error'?180:kind==='open'?680:kind==='close'?300:520;g.gain.setValueAtTime(.0001,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.055,audioCtx.currentTime+.012);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.12);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+.13)}catch(e){}}
 function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+const importedApps=new Map();let importedFolders=[];const DB_NAME='windowsTotalProDB';
+function openAppDB(){return new Promise((resolve,reject)=>{let settled=false;const timer=setTimeout(()=>{settled=true;reject(new Error('Tiempo de espera de almacenamiento agotado'))},4000);const req=indexedDB.open(DB_NAME,1);req.onupgradeneeded=()=>{const db=req.result;if(!db.objectStoreNames.contains('apps'))db.createObjectStore('apps',{keyPath:'id'});if(!db.objectStoreNames.contains('settings'))db.createObjectStore('settings',{keyPath:'key'});};req.onsuccess=()=>{clearTimeout(timer);if(settled){req.result.close();return}req.result.onversionchange=()=>req.result.close();resolve(req.result)};req.onerror=()=>{clearTimeout(timer);reject(req.error)};req.onblocked=()=>{clearTimeout(timer);settled=true;reject(new Error('Almacenamiento bloqueado por otra pestaña'))};});}
+async function dbAll(store){const db=await openAppDB();return new Promise((resolve,reject)=>{const tx=db.transaction(store,'readonly'),r=tx.objectStore(store).getAll();r.onsuccess=()=>resolve(r.result||[]);r.onerror=()=>reject(r.error);tx.oncomplete=()=>db.close();});}
+async function dbPut(store,value){const db=await openAppDB();return new Promise((resolve,reject)=>{const tx=db.transaction(store,'readwrite');tx.objectStore(store).put(value);tx.oncomplete=()=>{db.close();resolve(true)};tx.onerror=()=>{db.close();reject(tx.error)};});}
+async function dbDelete(store,key){const db=await openAppDB();return new Promise((resolve,reject)=>{const tx=db.transaction(store,'readwrite');tx.objectStore(store).delete(key);tx.oncomplete=()=>{db.close();resolve(true)};tx.onerror=()=>{db.close();reject(tx.error)};});}
+function renderImportedIcons(){const root=$('#desktopIcons');if(!root)return;root.querySelectorAll('[data-imported="true"]').forEach(n=>n.remove());for(const a of importedApps.values()){const el=document.createElement('div');el.className='dicon';el.dataset.app='imported:'+a.id;el.dataset.imported='true';el.tabIndex=0;el.setAttribute('role','button');el.title='Doble toque para abrir; clic derecho para administrar';el.innerHTML='<span class="ico">'+safe(a.icon||'📦')+'</span><span>'+safe(a.name)+'</span>';root.appendChild(el);}}
+function renderManager(){const list=$('#managedApps'),cats=$('#categoryList');if(!list)return;cats.innerHTML=importedFolders.length?'<p style="color:#c5deef">Categorías: '+importedFolders.map(safe).join(' · ')+'</p>':'';list.innerHTML='';if(!importedApps.size){list.innerHTML='<p class="managerIntro">Todavía no has importado aplicaciones adicionales.</p>';return;}for(const a of importedApps.values()){const row=document.createElement('div');row.className='managedApp';row.innerHTML='<span class="mi">'+safe(a.icon||'📦')+'</span><div class="mt"><b>'+safe(a.name)+'</b><small>'+safe(a.category||'Aplicaciones importadas')+' · '+safe(a.filename||'archivo HTML')+'</small></div><button data-run="'+safe(a.id)+'">Abrir</button><button data-edit="'+safe(a.id)+'">Organizar</button><button data-remove="'+safe(a.id)+'">Retirar</button>';list.appendChild(row);}}
+function showManager(){renderManager();$('#appManager').classList.add('open');}function hideManager(){$('#appManager').classList.remove('open');}
+async function loadImportedApps(){try{(await dbAll('apps')).forEach(a=>importedApps.set(a.id,a));const rec=(await dbAll('settings')).find(x=>x.key==='folders');if(rec)importedFolders=rec.value||[];renderImportedIcons();renderManager();}catch(e){console.warn('No se pudo leer el catálogo local',e);}}
+async function importHTMLFiles(files){for(const file of files){if(!/\.html?$/i.test(file.name)&&file.type!=='text/html'){alert('Solo se admiten archivos HTML.');continue;}try{const html=await file.text();if(!/<html[\s>]/i.test(html)&&!confirm(file.name+' no parece un HTML completo. ¿Importarlo de todos modos?'))continue;const id='app'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);const base=file.name.replace(/\.html?$/i,'').replace(/[-_]+/g,' ').trim()||'Aplicación nueva';const name=prompt('Nombre para el acceso directo:',base);if(name===null)continue;const rec={id,name:name.trim()||base,filename:file.name,icon:'📦',category:'Aplicaciones importadas',html,updated:Date.now()};await dbPut('apps',rec);importedApps.set(id,rec);}catch(e){alert('No se pudo importar '+file.name+'. El almacenamiento local puede estar bloqueado o lleno.');}}renderImportedIcons();renderManager();}
+function launchImported(id){const a=importedApps.get(id);if(!a)return;hideManager();return openApp('imported:'+id);} 
+$('#manageApps').addEventListener('click',showManager);$('#closeManager').addEventListener('click',hideManager);$('#importApps').addEventListener('click',()=>$('#importPicker').click());$('#importPicker').addEventListener('change',async e=>{if(e.target.files?.length)await importHTMLFiles([...e.target.files]);e.target.value='';});
+$('#newFolder').addEventListener('click',async()=>{const name=prompt('Nombre de la categoría:');if(!name||!name.trim())return;const clean=name.trim();const nextFolders=importedFolders.includes(clean)?[...importedFolders]:[...importedFolders,clean];try{await dbPut('settings',{key:'folders',value:nextFolders});importedFolders=nextFolders;renderManager();}catch(e){alert('No se pudo guardar la categoría.');}});
+$('#appManager').addEventListener('click',e=>{if(e.target===$('#appManager'))hideManager();const run=e.target.closest('[data-run]');if(run)launchImported(run.dataset.run);const edit=e.target.closest('[data-edit]');if(edit){const a=importedApps.get(edit.dataset.edit);if(!a)return;const n=prompt('Nombre del acceso directo:',a.name);if(n===null)return;const c=prompt('Categoría:',a.category||'Aplicaciones importadas');const ic=prompt('Emoji del icono:',a.icon||'📦');if(c===null||ic===null)return;const updated={...a,name:n.trim()||a.name,category:c.trim()||a.category,icon:ic.trim()||a.icon};dbPut('apps',updated).then(()=>{importedApps.set(a.id,updated);renderImportedIcons();renderManager()}).catch(()=>alert('No se pudo guardar.'));}const rem=e.target.closest('[data-remove]');if(rem){const a=importedApps.get(rem.dataset.remove);if(a&&confirm('¿Retirar '+a.name+' del lanzador? El archivo original no se borrará.'))dbDelete('apps',a.id).then(()=>{importedApps.delete(a.id);renderImportedIcons();renderManager()}).catch(()=>alert('No se pudo retirar.'));}});
+// La apertura se delega exclusivamente en appManager para evitar dobles ejecuciones.
+$('#desktopIcons').addEventListener('dblclick',e=>{const icon=e.target.closest('.dicon[data-imported="true"]');if(icon)launchImported(icon.dataset.app.slice(9));});
+$('#desktopIcons').addEventListener('pointerup',e=>{const icon=e.target.closest('.dicon');if(icon&&e.pointerType==='touch'){if(icon.dataset.imported==='true')launchImported(icon.dataset.app.slice(9));else openApp(icon.dataset.app)}});
+$('#desktopIcons').addEventListener('contextmenu',e=>{const icon=e.target.closest('.dicon[data-imported="true"]');if(!icon)return;e.preventDefault();showManager();});
+$('#desktopIcons').addEventListener('keydown',e=>{const icon=e.target.closest('.dicon[data-imported="true"]');if(icon&&(e.key==='Enter'||e.key===' ')){e.preventDefault();launchImported(icon.dataset.app.slice(9));}});
+const catalogReady=loadImportedApps();
+
 function contentFor(app,id){
  if(app==='computer')return `<div class="explorerTop"><span class="big">🖥️</span><div><b>Mi PC</b><div>Acceso a los recursos de este escritorio web</div></div></div><div class="explorerGrid"><div class="explorerItem" data-launch="documents"><span class="big">📁</span>Mis documentos</div><div class="explorerItem"><span class="big">💽</span>Disco local (C:)<small> Simulado</small></div><div class="explorerItem" data-launch="recycle"><span class="big">🗑️</span>Papelera de reciclaje</div><div class="explorerItem" data-launch="settings"><span class="big">⚙️</span>Panel de control</div></div><div class="statusbar">win-xp · Entorno web local</div>`;
  if(app==='documents')return `<div class="explorerTop"><span class="big">📁</span><div><b>Mis documentos</b><div>Archivos guardados en este navegador</div></div></div><div class="panel" id="docsList">Cargando documentos…</div><div class="statusbar">Los documentos permanecen en este navegador.</div>`;
@@ -152,18 +209,23 @@ function contentFor(app,id){
  if(app==='mines')return `<div class="toolbar"><button data-action="newMines">🙂 Nueva partida</button><span>💣 <b id="mineCount-${id}">10</b></span><span style="margin-left:auto">⏱ local</span></div><div class="panel" id="mineBoard-${id}" style="background:#c0c0c0;text-align:center"></div><div class="statusbar" id="mineStatus-${id}">Pulsa una casilla para empezar. Clic derecho para marcar.</div>`;
  if(app==='carbon')return `<iframe class="carbonFrame" id="carbonFrame-${id}" title="Aplicaciones Carbono v17" allow="fullscreen; clipboard-read; clipboard-write"></iframe>`;
  if(app==='settings')return `<div class="explorerTop"><span class="big">⚙️</span><div><b>Panel de control</b><div>Personaliza esta sesión de win-xp</div></div></div><div class="panel"><h3>Configuración</h3><p><label><input type="checkbox" id="soundToggle" ${audioOn?'checked':''}> Activar sonidos de interfaz</label></p><p>Fondo de escritorio</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="xpbtn" data-wall="bliss">Verde clásico</button><button class="xpbtn" data-wall="blue">Azul</button><button class="xpbtn" data-wall="night">Noche</button></div><p>Los ajustes visuales se aplican a esta sesión. Los documentos del Bloc de notas se guardan localmente.</p></div>`;
- return `<div class="panel"><h2>Ayuda y soporte técnico</h2><p><b>Bienvenido a win-xp</b></p><p>Una recreación web de escritorio inspirada en Windows XP, con las aplicaciones de Carbono v17 accesibles desde el icono «Aplicaciones Carbono».</p><ul><li>Abre aplicaciones con doble clic en los iconos.</li><li>Usa Inicio para acceder a las herramientas.</li><li>Arrastra las barras de título para mover las ventanas.</li><li>Minimiza, maximiza y cierra con los controles superiores.</li><li>El Bloc de notas conserva el texto en el almacenamiento local de este navegador.</li><li>Abre «Aplicaciones Carbono» para usar la suite original Carbono v17 dentro de una ventana del escritorio.</li></ul><p>Creado como aplicación web independiente. No es un producto oficial de Microsoft.</p><p>© Fernando Juan, Soluciones Carbono S.A. Todos los derechos reservados.</p></div>`;
+ return `<div class="panel"><h2>Ayuda y soporte técnico</h2><p><b>Bienvenido a Windows Total Pro</b></p><p>Una recreación web de escritorio inspirada en Windows XP, con las aplicaciones de Carbono v17 accesibles desde el icono «Aplicaciones Carbono».</p><ul><li>Abre aplicaciones con doble clic en los iconos.</li><li>Usa Inicio para acceder a las herramientas.</li><li>Arrastra las barras de título para mover las ventanas.</li><li>Minimiza, maximiza y cierra con los controles superiores.</li><li>El Bloc de notas conserva el texto en el almacenamiento local de este navegador.</li><li>Abre «Aplicaciones Carbono» para usar la suite original Carbono v17 dentro de una ventana del escritorio.</li></ul><p>Creado como aplicación web independiente. No es un producto oficial de Microsoft.</p><p>© Fernando Juan · SOLUCIONES CARBONO PRO Todos los derechos reservados.</p></div>`;
 }
 function openApp(app){
+ if(app.startsWith('imported:')&&!importedApps.has(app.slice(9)))return;
  startMenu.classList.remove('open');startBtn.setAttribute('aria-expanded','false');
  const existing=[...wins.values()].find(w=>w.app===app&&!w.closed);
  if(existing){restore(existing.id);return}
- const info=appInfo[app]||appInfo.about,id=nextId++;
+ const imported=app.startsWith('imported:')?importedApps.get(app.slice(9)):null;
+ const info=imported?{title:imported.name,icon:imported.icon||'📦',w:900,h:620}:(appInfo[app]||appInfo.about),id=nextId++;
  const el=document.createElement('section');el.className='win active';el.dataset.id=id;el.style.zIndex=++z;
  const dw=Math.min(info.w,innerWidth-16),dh=Math.min(info.h,innerHeight-56);
  el.style.width=dw+'px';el.style.height=dh+'px';el.style.left=Math.max(4,(innerWidth-dw)/2+(wins.size%5)*18)+'px';el.style.top=Math.max(4,(innerHeight-38-dh)/2+(wins.size%5)*14)+'px';
- el.innerHTML=`<div class="titlebar"><span class="wicon">${info.icon}</span><span class="wtitle">${safe(info.title)}</span><div class="wcontrols"><button data-win="min" aria-label="Minimizar">—</button><button data-win="max" aria-label="Maximizar">□</button><button class="close" data-win="close" aria-label="Cerrar">×</button></div></div><div class="winbody">${contentFor(app,id)}</div>`;
+ el.style.left=Math.max(0,Math.min(parseFloat(el.style.left),$('#desktop').clientWidth-dw))+'px';
+ el.style.top=Math.max(0,Math.min(parseFloat(el.style.top),$('#desktop').clientHeight-dh))+'px';
+ el.innerHTML=`<div class="titlebar"><span class="wicon">${info.icon}</span><span class="wtitle">${safe(info.title)}</span><div class="wcontrols"><button data-win="min" aria-label="Minimizar">—</button><button data-win="max" aria-label="Maximizar">□</button><button class="close" data-win="close" aria-label="Cerrar">×</button></div></div><div class="winbody">${imported?'<iframe class="carbonFrame" title="'+safe(imported.name)+'" sandbox="allow-scripts allow-forms allow-downloads allow-modals allow-pointer-lock"></iframe>':contentFor(app,id)}</div>`;
  windows.appendChild(el);
+ if(imported)el.querySelector('iframe').srcdoc=imported.html;
  if(app==='carbon'){const frame=el.querySelector('#carbonFrame-'+id);try{frame.srcdoc=carbonoV17Html()}catch(err){frame.srcdoc='<html><body style="font:14px Tahoma;padding:20px">No se pudo cargar Carbono v17. Vuelve a abrir esta ventana.</body></html>'}}
  const task=document.createElement('button');task.className='taskapp active';task.textContent=info.icon+' '+info.title;taskApps.appendChild(task);
  const w={id,app,el,task,closed:false,min:false,max:false};wins.set(id,w);activate(id);beep('open');
@@ -189,11 +251,12 @@ function openApp(app){
  return w;
 }
 function activate(id){const w=wins.get(id);if(!w||w.closed)return;activeId=id;for(const x of wins.values()){x.el.classList.toggle('active',x.id===id&&!x.min);x.task.classList.toggle('active',x.id===id&&!x.min);if(x.id===id)x.el.style.zIndex=++z}}
-function minimize(id){const w=wins.get(id);if(!w)return;w.el.style.display='none';w.min=true;w.task.classList.remove('active');if(activeId===id)activeId=null;beep('click')}
+function activateTop(){const visible=[...wins.values()].filter(w=>!w.closed&&!w.min).sort((a,b)=>Number(b.el.style.zIndex)-Number(a.el.style.zIndex));if(visible.length)activate(visible[0].id)}
+function minimize(id){const w=wins.get(id);if(!w)return;w.el.style.display='none';w.min=true;w.task.classList.remove('active');if(activeId===id){activeId=null;activateTop()}beep('click')}
 function restore(id){const w=wins.get(id);if(!w)return;w.el.style.display='flex';w.min=false;if(w.max)w.el.classList.add('maximized');activate(id);beep('open')}
-function toggleMax(id){const w=wins.get(id);if(!w)return;w.max=!w.max;w.el.classList.toggle('maximized',w.max);if(!w.max){w.el.style.width=Math.min((appInfo[w.app]||{}).w||520,innerWidth-16)+'px';w.el.style.height=Math.min((appInfo[w.app]||{}).h||360,innerHeight-56)+'px';w.el.style.left=Math.max(0,(innerWidth-w.el.offsetWidth)/2)+'px';w.el.style.top=Math.max(0,(innerHeight-38-w.el.offsetHeight)/2)+'px'}activate(id)}
-function closeWin(id){const w=wins.get(id);if(!w)return;if(w.app==='notepad'){const ta=w.el.querySelector('textarea');if(ta&&ta.value&&!confirm('El texto se guarda automáticamente. ¿Cerrar el Bloc de notas?'))return;saveNote(id)}w.closed=true;w.el.remove();w.task.remove();wins.delete(id);if(activeId===id)activeId=null;beep('close')}
-function dragWindow(el,id){const bar=el.querySelector('.titlebar');let sx,sy,ox,oy,drag=false;bar.addEventListener('pointerdown',e=>{if(e.target.closest('button')||el.classList.contains('maximized'))return;drag=true;sx=e.clientX;sy=e.clientY;ox=el.offsetLeft;oy=el.offsetTop;bar.setPointerCapture(e.pointerId);activate(id)});bar.addEventListener('pointermove',e=>{if(!drag)return;el.style.left=Math.max(0,Math.min(innerWidth-el.offsetWidth,ox+e.clientX-sx))+'px';el.style.top=Math.max(0,Math.min(innerHeight-38-el.offsetHeight,oy+e.clientY-sy))+'px'});bar.addEventListener('pointerup',()=>drag=false);bar.addEventListener('pointercancel',()=>drag=false)}
+function toggleMax(id){const w=wins.get(id);if(!w)return;if(!w.max)w.normalRect={left:w.el.style.left,top:w.el.style.top,width:w.el.style.width,height:w.el.style.height};w.max=!w.max;w.el.classList.toggle('maximized',w.max);if(!w.max&&w.normalRect)Object.assign(w.el.style,w.normalRect);activate(id);} 
+function closeWin(id){const w=wins.get(id);if(!w)return;if(w.app==='notepad'){const ta=w.el.querySelector('textarea');if(ta&&ta.value&&!confirm('El texto se guarda automáticamente. ¿Cerrar el Bloc de notas?'))return;saveNote(id)}w.closed=true;w.el.remove();w.task.remove();wins.delete(id);if(activeId===id){activeId=null;activateTop()}beep('close')}
+function dragWindow(el,id){const bar=el.querySelector('.titlebar');let state=null;bar.addEventListener('dblclick',e=>{if(!e.target.closest('button'))toggleMax(id)});bar.addEventListener('pointerdown',e=>{if(e.button!==0||e.target.closest('button')||el.classList.contains('maximized'))return;e.preventDefault();state={id:e.pointerId,x:e.clientX,y:e.clientY,left:el.offsetLeft,top:el.offsetTop};bar.setPointerCapture(e.pointerId);activate(id)});bar.addEventListener('pointermove',e=>{if(!state||state.id!==e.pointerId)return;const d=$('#desktop');el.style.left=Math.max(0,Math.min(d.clientWidth-el.offsetWidth,state.left+e.clientX-state.x))+'px';el.style.top=Math.max(0,Math.min(d.clientHeight-el.offsetHeight,state.top+e.clientY-state.y))+'px'});for(const ev of ['pointerup','pointercancel','lostpointercapture'])bar.addEventListener(ev,()=>state=null);} 
 function noteKey(id){return 'winxp.note.'+id}
 function initNote(id){const ta=$('#note-'+id);let v='';try{v=localStorage.getItem('winxp.notepad')||''}catch(e){}ta.value=v;let timer;ta.addEventListener('input',()=>{clearTimeout(timer);$('#noteStatus-'+id).textContent='Cambios pendientes…';timer=setTimeout(()=>saveNote(id),350)})}
 function saveNote(id){const ta=$('#note-'+id);if(!ta)return;try{localStorage.setItem('winxp.notepad',ta.value);const s=$('#noteStatus-'+id);if(s)s.textContent='Guardado localmente · '+ta.value.length+' caracteres'}catch(e){alert('No se pudo guardar en este navegador. Exporta el texto como archivo.');beep('error')}}
@@ -221,8 +284,9 @@ $$('[data-app]').forEach(item=>{let timer;item.addEventListener('dblclick',()=>o
 startMenu.querySelectorAll('.smItem').forEach(item=>item.addEventListener('click',()=>openApp(item.dataset.app)));
 $('#shutdown').addEventListener('click',()=>{startMenu.classList.remove('open');if(confirm('¿Apagar win-xp? Las notas ya guardadas permanecerán en este navegador.')){document.body.innerHTML='<div style="height:100%;display:grid;place-items:center;background:#003399;color:white;font:16px Tahoma;text-align:center"><div><div style="font-size:64px">🪟</div><h2>win-xp se ha apagado</h2><button onclick="location.reload()" style="padding:10px 22px">Volver a iniciar</button></div></div>'}});
 $('#logoff').addEventListener('click',()=>{startMenu.classList.remove('open');alert('No hay cuentas de usuario reales en esta simulación.')});
-document.addEventListener('pointerdown',e=>{if(!startMenu.contains(e.target)&&!startBtn.contains(e.target))startMenu.classList.remove('open')});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){startMenu.classList.remove('open');const dialogs=$$('.dialogShade');dialogs.forEach(d=>d.remove())}if(e.key==='F1'){e.preventDefault();openApp('about')}});
+function closeStart(){startMenu.classList.remove('open');startBtn.setAttribute('aria-expanded','false')}
+document.addEventListener('pointerdown',e=>{if(!startMenu.contains(e.target)&&!startBtn.contains(e.target))closeStart()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeStart();hideManager();const dialogs=$$('.dialogShade');dialogs.forEach(d=>d.remove())}if(e.key==='F1'){e.preventDefault();openApp('about')}});
 // Personalización: pulsación larga sobre el escritorio para elegir una imagen de la galería.
 const wallpaperPicker=$('#wallpaperPicker'), wallpaperEl=$('#wallpaper');
 function applyWallpaper(data, persist=true){wallpaperEl.style.backgroundImage=`linear-gradient(#0001,#0001),url("${data}")`;wallpaperEl.style.backgroundSize='cover';wallpaperEl.style.backgroundPosition='center';wallpaperEl.style.opacity='1';if(persist){try{localStorage.setItem('winxp.customWallpaper',data)}catch(e){alert('La imagen se aplicó, pero es demasiado grande para guardarla permanentemente en el navegador.')}}}
@@ -233,18 +297,22 @@ let longPressTimer=null,longPressTriggered=false;
 $('#desktop').addEventListener('pointerdown',e=>{if(e.target.closest('.win,#desktopIcons,#desktopTools,#taskbar,#startMenu'))return;longPressTriggered=false;longPressTimer=setTimeout(()=>{longPressTriggered=true;chooseWallpaper();},650)});
 ['pointerup','pointercancel','pointermove'].forEach(ev=>$('#desktop').addEventListener(ev,()=>{if(longPressTimer){clearTimeout(longPressTimer);longPressTimer=null}}));
 $('#vistaToggle').addEventListener('click',()=>{document.body.classList.toggle('vista');const on=document.body.classList.contains('vista');$('#vistaToggle').textContent=on?'🪟 Cambiar a XP':'🪟 Cambiar a Vista';try{localStorage.setItem('winxp.theme',on?'vista':'xp')}catch(e){}beep('open')});
-$('#downloadApp').addEventListener('click',()=>{try{const copy=document.documentElement.cloneNode(true);const ws=copy.querySelector('#windows');if(ws)ws.replaceChildren();const splash=copy.querySelector('#carbonoSplash');if(splash)splash.remove();const sm=copy.querySelector('#startMenu');if(sm)sm.classList.remove('open');const html='<!DOCTYPE html>\n'+copy.outerHTML;download('win-xp-carbono-v17-v3.html',new Blob([html],{type:'text/html;charset=utf-8'}));alert('Descarga solicitada: win-xp-carbono-v17-v3.html. Android y el navegador deciden si se guarda directamente en Descargas o muestran un selector de ubicación.')}catch(e){alert('El navegador no permitió crear la descarga. Usa el menú del navegador para guardar la página.')}});
+$('#downloadApp').addEventListener('click',()=>{try{download('Windows-Total-Pro-v5.html',new Blob([SOURCE_HTML],{type:'text/html;charset=utf-8'}))}catch(e){alert('No se pudo generar la descarga. Conserva el archivo HTML original.')}});
 try{const saved=localStorage.getItem('winxp.customWallpaper');if(saved)applyWallpaper(saved,false);if(localStorage.getItem('winxp.theme')==='vista'){document.body.classList.add('vista');$('#vistaToggle').textContent='🪟 Cambiar a XP'}}catch(e){}
 function tick(){const d=new Date();$('#clock').textContent=d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})}tick();setInterval(tick,15000);
 window.addEventListener('resize',()=>{for(const w of wins.values()){if(w.max)continue;const r=w.el.getBoundingClientRect();if(r.right>innerWidth)w.el.style.left=Math.max(0,innerWidth-w.el.offsetWidth)+'px';if(r.bottom>innerHeight-38)w.el.style.top=Math.max(0,innerHeight-38-w.el.offsetHeight)+'px'}});
 // Sonido de arranque original, sintetizado con Web Audio (no utiliza audio de Windows).
 function playStartupChime(){if(!audioOn)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();const now=audioCtx.currentTime;const notes=[{f:523.25,t:0,d:.22},{f:659.25,t:.13,d:.24},{f:783.99,t:.29,d:.3},{f:1046.5,t:.48,d:.48},{f:783.99,t:.73,d:.28},{f:1046.5,t:.91,d:.55}];for(const n of notes){const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.setValueAtTime(n.f,now+n.t);g.gain.setValueAtTime(.0001,now+n.t);g.gain.exponentialRampToValueAtTime(.075,now+n.t+.025);g.gain.exponentialRampToValueAtTime(.0001,now+n.t+n.d);o.connect(g);g.connect(audioCtx.destination);o.start(now+n.t);o.stop(now+n.t+n.d+.02)}}catch(e){}}
-function dismissSplash(withSound){const splash=$('#carbonoSplash');if(!splash||splash.classList.contains('hidden'))return;if(withSound)playStartupChime();$('#splashStatus').textContent='Escritorio listo';splash.classList.add('hidden');setTimeout(()=>splash.remove(),750)}
+let splashTimer=null,splashCleanup=null,splashDismissed=false;
+function dismissSplash(withSound=false){const splash=$('#carbonoSplash');if(!splash||splashDismissed)return;splashDismissed=true;clearTimeout(splashTimer);if(withSound)playStartupChime();$('#splashStatus').textContent='Windows Total Pro · Escritorio listo';splash.classList.add('hidden');splash.setAttribute('aria-hidden','true');for(const id of ['desktop','taskbar'])$('#'+id).inert=false;const cleanup=()=>{clearTimeout(splashCleanup);splash.remove()};splash.addEventListener('transitionend',cleanup,{once:true});splashCleanup=setTimeout(cleanup,800);startBtn.focus();}
 $('#splashStart').addEventListener('click',()=>dismissSplash(true));
 $('#carbonoSplash').addEventListener('click',e=>{if(e.target.id==='carbonoSplash')dismissSplash(true)});
-setTimeout(()=>dismissSplash(false),5200);
-setTimeout(()=>openApp('about'),250);
-})();
-</script>
+for(const id of ['desktop','taskbar'])$('#'+id).inert=true;
+$('#splashStart').focus();
+$('#splashStatus').textContent='Escritorio listo · Cargando catálogo local…';
+Promise.resolve(catalogReady).finally(()=>{if(!splashDismissed)$('#splashStatus').textContent='Escritorio listo · Pulsa Iniciar o espera';});
+splashTimer=setTimeout(()=>dismissSplash(false),3200);
+window.addEventListener('pagehide',()=>{for(const w of wins.values())if(w.app==='notepad')saveNote(w.id)});
 
-</body></html>
+})();
+</script></body></html>
